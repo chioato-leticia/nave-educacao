@@ -5,8 +5,6 @@ const iceCreams = [
   { flavor: "vanilla", quantity: 0 },
 ];
 
-const foundIceCream = iceCreams.find(
-  (iceCream) => iceCream.flavor === "african Cream"
-);
+const foundIceCream = iceCreams.find((iceCream) => !iceCream.quantity);
 
 console.log(foundIceCream);

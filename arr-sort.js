@@ -1,3 +1,8 @@
-const numbers = [4, 5, 1, 8, 20, 2];
+const fruits = ["banana", "apple", "orange"];
+const num = [2, 10, 5, 7, 6, 1];
 
-console.log(numbers.sort());
+const orderedNum = num.slice().sort((a, b) => {
+  return b - a;
+});
+
+console.log(orderedNum, num);
