@@ -31,66 +31,39 @@ const colaboradores = [
   },
 ];
 
-let ageAsc = colaboradores.sort((a, b) => {
-  if (a.idade > b.idade) {
-    return 1;
-  }
-  if (a.idade < b.idade) {
-    return -1;
-  }
-  return 0;
-});
-
-// const ascAgeOrderedArr = colaboradores.sort((a, b) =>
-//   a.idade > b.idade ? 1 : -1
-// );
+// let ageAsc = colaboradores.sort((a, b) => {
+//   return a.idade - b.idade;
+// });
 
 // console.log(ageAsc);
 
-let ageDesc = colaboradores.sort((a, b) => {
-  if (a.idade < b.idade) {
-    return 1;
-  }
-  if (a.idade > b.idade) {
-    return -1;
-  }
-  return 0;
-});
-
+// let ageDesc = colaboradores.sort((a, b) => {
+//   return b.idade - a.idade;
+// });
 // console.log(ageDesc);
 
-const orderCargo = colaboradores.sort((a, b) => {
-  if (a.cargo == "estagiario") {
-    return -1;
-  }
-  if (a.cargo == "front-end") {
-    return 1;
-  }
-  if (a.cargo == "back-end") {
-    return -1;
-  }
-  if (a.cargo == "designer") {
-    return 1;
-  }
-  return 0;
-});
+// const orderCargo = colaboradores.sort((a, b) => {
+//   if (a.cargo == "estagiario") {
+//     return -1;
+//   }
+//   if (a.cargo == "front-end") {
+//     return 1;
+//   }
+//   if (a.cargo == "back-end") {
+//     return -1;
+//   }
+//   if (a.cargo == "designer") {
+//     return 1;
+//   }
+//   return 0;
+// });
 
-// console.log(orderCargo);
+// // console.log(orderCargo);
 
 const orderAge = colaboradores.sort((a, b) => {
-  if (a.idade > b.idade) {
-    return 1;
-  }
-  if (a.idade < b.idade) {
-    return -1;
-  }
-  if (a.cargo > b.cargo) {
-    return 1;
-  }
-  if (a.cargo > b.cargo) {
-    return -1;
-  }
-  return 0;
+  if (a.idade - b.idade !== 0) return a.idade - b.idade;
+  if (b.idade - a.idade !== 0) return b.idade - a.idade;
+  if (b.cargo - a.cargo !== 0) return b.cargo - a.cargo;
 });
 
 console.log(orderAge);

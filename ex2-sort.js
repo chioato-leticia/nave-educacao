@@ -27,31 +27,16 @@ const installments = [
 ];
 
 const installmentDesc = installments.sort((a, b) => {
-  if (a.value < b.value) {
-    return 1;
-  }
-  if (a.value > b.value) {
-    return -1;
-  }
-  return 0;
+  return b.value - a.value;
 });
 
 // console.log(installmentDesc);
 
 const orderIstallment = installments.sort((a, b) => {
-  if (a.value > b.value) {
-    return 1;
-  }
-  if (a.value < b.value) {
-    return -1;
-  }
-  if (a.installment_number < b.installment_number) {
-    return 1;
-  }
-  if (a.installment_number > b.installment_number) {
-    return -1;
-  }
-  return 0;
+  if (a.value - b.value !== 0) return a.value - b.value;
+  if (b.value - a.value !== 0) return b.value - a.value;
+  if (b.installment_number - a.installment_number !== 0)
+    return b.installment_number - a.installment_number;
 });
 
 console.log(orderIstallment);
