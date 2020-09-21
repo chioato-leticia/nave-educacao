@@ -31,39 +31,15 @@ const colaboradores = [
   },
 ];
 
-// let ageAsc = colaboradores.sort((a, b) => {
-//   return a.idade - b.idade;
-// });
+const cargos = {
+  estagiario: 1,
+  "front-end": 2,
+  "back-end": 3,
+  designer: 4,
+};
 
-// console.log(ageAsc);
-
-// let ageDesc = colaboradores.sort((a, b) => {
-//   return b.idade - a.idade;
-// });
-// console.log(ageDesc);
-
-// const orderCargo = colaboradores.sort((a, b) => {
-//   if (a.cargo == "estagiario") {
-//     return -1;
-//   }
-//   if (a.cargo == "front-end") {
-//     return 1;
-//   }
-//   if (a.cargo == "back-end") {
-//     return -1;
-//   }
-//   if (a.cargo == "designer") {
-//     return 1;
-//   }
-//   return 0;
-// });
-
-// // console.log(orderCargo);
-
-const orderAge = colaboradores.sort((a, b) => {
-  if (a.idade - b.idade !== 0) return a.idade - b.idade;
-  if (b.idade - a.idade !== 0) return b.idade - a.idade;
-  if (b.cargo - a.cargo !== 0) return b.cargo - a.cargo;
+const orderCargo = colaboradores.sort((a, b) => {
+  return cargos[a.cargo] - cargos[b.cargo];
 });
 
-console.log(orderAge);
+console.log(orderCargo);
