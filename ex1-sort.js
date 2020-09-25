@@ -38,8 +38,17 @@ const cargos = {
   designer: 4,
 };
 
-const orderCargo = colaboradores.sort((a, b) => {
-  return cargos[a.cargo] - cargos[b.cargo];
+// const orderCargo = colaboradores.sort((a, b) => {
+//   return cargos[a.cargo] - cargos[b.cargo];
+// });
+
+// console.log(orderCargo);
+
+const orderAge = colaboradores.sort((a, b) => {
+  console.log(a, b, a.idade - b.idade || cargos[a.cargo] - cargos[b.cargo]);
+
+  console.log("-------------------");
+  return a.idade - b.idade || cargos[a.cargo] - cargos[b.cargo];
 });
 
-console.log(orderCargo);
+console.log(orderAge);
