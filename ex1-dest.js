@@ -35,4 +35,22 @@ const printProj = ({ projetos }) => {
 const printSecondPosition = ({ projetos: [, nome2] }) => {
   console.log(nome2);
 };
-printSecondPosition(user);
+// printSecondPosition(user);
+
+// Desestruture e imprima o primeiro elemento do array.
+const printfirstElem = ([firstElement]) => {
+  console.log(firstElement);
+};
+// printfirstElem(studentsObj);
+
+//Desestruture e imprima o terceiro elemento do array.
+const printThirdElem = ([, , thirdElement]) => {
+  console.log(thirdElement);
+};
+// printThirdElem(studentsObj);
+
+//Desestruture e imprima o nome do segundo elemento do array.
+const printSecondElem = ([, secondElement]) => {
+  console.log(secondElement);
+};
+printSecondElem(studentsObj);
