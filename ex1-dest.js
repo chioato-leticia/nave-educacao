@@ -50,7 +50,7 @@ const printThirdElem = ([, , thirdElement]) => {
 // printThirdElem(studentsObj);
 
 //Desestruture e imprima o nome do segundo elemento do array.
-const printSecondElem = ([, secondElement]) => {
-  console.log(secondElement);
+const printSecondElem = ([, { name }]) => {
+  console.log(name);
 };
 printSecondElem(studentsObj);
